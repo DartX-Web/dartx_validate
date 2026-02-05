@@ -12,4 +12,5 @@ export 'src/decorators/length/max.dart';
 export 'src/decorators/int/positive.dart';
 export 'src/decorators/string/not_empty.dart';
 export 'src/decorators/list/not_empty.dart';
+export 'src/decorators/list/unique.dart';
 export 'src/validator.dart';

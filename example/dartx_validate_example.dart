@@ -17,15 +17,22 @@ class User {
   final int id;
 
   @NotEmptyList()
+  @Unique()
   final List<String> roles;
 
   User(this.name, this.email, this.age, this.id, this.roles);
 }
 
 void main() {
-  final user = User('John Doe', 'john.doe@example.com', 30, 1, ['admin']);
+  final user = User('John Doe', 'john.doe@example.com', 30, 1, [
+    'admin',
+    "user",
+    "admin",
+  ]);
 
   if (validate(user)) {
     print("OK");
+  } else {
+    print("Validation failed");
   }
 }
